@@ -1,0 +1,40 @@
+plugins {
+    id "com.android.application"
+    id 'com.google.gms.google-services' // FlutterFire Configuration
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin" // Must be applied after Android and Kotlin plugins
+}
+
+android {
+    namespace = "com.example.ecom"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    defaultConfig {
+        applicationId "com.example.ecom"
+        minSdkVersion 23 // Set the minimum SDK version to resolve FirebaseAuth requirements
+        targetSdkVersion flutter.targetSdkVersion // Align with Flutter's target SDK
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            // Signing with debug keys for now; replace with release keys later
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
