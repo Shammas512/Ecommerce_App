@@ -182,14 +182,14 @@ class _HomeviewState extends State<Homeview> {
                       children: [
                         Expanded(
                           child: Container(
-                            height: 70,
-                            decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.vertical(
-                                  top: Radius.circular(10)),
-                              color: Colors.grey.shade200,
-                              image: DecorationImage(
-                                image: AssetImage(product[index]["image"]),
-                                fit: BoxFit.cover,
+                          height: 70,
+                          decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.vertical(
+                          top: Radius.circular(10)),
+                          color: Colors.grey.shade200,
+                          image: DecorationImage(
+                          image: AssetImage(product[index]["image"]),
+                          fit: BoxFit.cover,
                               ),
                             ),
                           ),

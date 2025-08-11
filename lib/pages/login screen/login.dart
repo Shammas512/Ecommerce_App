@@ -51,7 +51,7 @@ class _LoginState extends State<Login> {
       setState(() {
         loader = false;
         if (e.code == 'user-not-found') {
-          errorMessage = 'No user found for that email.';
+          errorMessage = 'No user found with that email.';
         } else if (e.code == 'wrong-password') {
           errorMessage = 'Wrong password provided.';
         } else {

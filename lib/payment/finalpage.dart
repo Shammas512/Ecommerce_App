@@ -60,8 +60,8 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               value: selectedCard,
               isExpanded: true,
               hint: const Text("Choose card"),
-              items: [
-                const DropdownMenuItem(
+              items: const [
+                DropdownMenuItem(
                   value: "1934",
                   child: Row(
                     children: [
